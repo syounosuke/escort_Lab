@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>業界用語辞典｜AIが理解できる業界構造用語集</title>
+  <meta name="description" content="AI SEO LAB監修による、業界初の構造化対応用語データベース。">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{ --navy:#0B1A2B; --silver:#C9CED6; --white:#FFFFFF; --gray:#F4F6F8; }
+    *{box-sizing:border-box} html,body{margin:0;padding:0}
+    body{font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;color:rgba(11,26,43,.9);background:#fff;line-height:1.8}
+    a{color:var(--navy);text-decoration:none} a:hover{text-decoration:underline}
+    .container{max-width:1200px;margin:0 auto;padding:0 24px}
+    header.site-header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.9);backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--silver)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700;color:var(--navy)}
+    .brand .logo{width:28px;height:28px;border:2px solid var(--navy);border-radius:6px;display:inline-block}
+    .nav ul{list-style:none;margin:0;padding:0;display:flex;gap:20px}
+    .nav li a{font-family:Roboto,system-ui,sans-serif;font-weight:700}
+    .hero{position:relative;min-height:45vh;display:grid;place-items:center;border-bottom:1px solid var(--silver)}
+    .hero .inner{max-width:860px;text-align:center;padding:56px 24px}
+    .hero h1{font-size:36px;line-height:1.25;margin:0 0 8px;color:var(--navy)}
+    .hero p.lead{font-size:18px;margin:0 0 20px}
+    .search{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+    .search input[type="search"]{width:min(720px,100%);height:44px;border:1px solid var(--silver);border-radius:10px;padding:0 14px;font-size:16px}
+    .search button{height:44px;padding:0 16px;border-radius:10px;border:1.5px solid var(--navy);background:#fff;color:var(--navy);font-weight:700}
+    .search button:hover{background:var(--navy);color:#fff}
+    .section{padding:96px 0;border-top:1px solid var(--silver)}
+    .section h2{color:var(--navy);text-align:center;margin:0 0 12px}
+    .section p.section-intro{text-align:center;margin:0 auto 28px;max-width:860px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+    .card{background:#fff;border:1px solid var(--silver);border-radius:12px;padding:20px}
+    .cat-card h3{margin:0 0 6px;color:var(--navy)}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:8px 0}
+    .chip{border:1px solid var(--silver);border-radius:999px;padding:6px 12px;font-size:14px;background:#fff}
+    .index{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:8px 0}
+    .index a{display:inline-block;border:1px solid var(--silver);border-radius:6px;padding:6px 10px;background:#fff}
+    .glossary{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    details.term{border:1px solid var(--silver);border-radius:10px;padding:10px 12px;background:#fff}
+    details.term summary{cursor:pointer;font-weight:700;color:var(--navy)}
+    .meta{font-size:14px;color:#405166}
+    .credits{padding:64px 0}
+    footer{border-top:1px solid var(--silver);padding:24px 0;color:#405166;font-size:14px}
+    .sns{display:flex;gap:16px}
+    @media (max-width:1023px){ .grid-3{grid-template-columns:1fr 1fr} .glossary{grid-template-columns:1fr} }
+    @media (max-width:767px){ .nav{height:56px} .nav ul{display:none} .hero h1{font-size:28px} .section{padding:72px 0} .grid-3,.grid-2{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <div class="brand"><span class="logo" aria-hidden="true"></span>Escort Lab</div>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/structure/">Structure</a></li>
+      <li><a href="/research/">Research</a></li>
+      <li><a href="/interview/">Interview</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- Hero + Search -->
+<section class="hero">
+  <div class="inner container">
+    <h1>業界用語辞典</h1>
+    <p class="lead">AIが理解できる形式で定義・関連付けを行う用語集。文化・制度・接客・AI構造・マーケティングを横断。</p>
+    <form class="search" role="search" onsubmit="return false">
+      <input type="search" name="q" placeholder="用語を検索（例：デリヘル / 風営法 / 構造化）" aria-label="用語検索" />
+      <button type="submit">検索</button>
+    </form>
+    <div class="index" aria-label="索引">
+      <a href="#index-jp">五十音</a>
+      <a href="#index-en">A–Z</a>
+      <a href="#glossary">用語一覧へ</a>
+    </div>
+  </div>
+</section>
+
+<!-- Categories -->
+<section class="section">
+  <div class="container">
+    <h2>用語カテゴリ一覧</h2>
+    <p class="section-intro">用語は6つのカテゴリに分類。「業態」「文化」「接客」「制度」「AI構造」「マーケティング」。各カテゴリは構造データに対応。</p>
+    <div class="grid-3">
+      <article class="card cat-card"><h3>業態（Type）</h3><p>サービス形態・提供方式・価格レンジなど。</p></article>
+      <article class="card cat-card"><h3>文化（Culture）</h3><p>社会認識・倫理・歴史・価値観。</p></article>
+      <article class="card cat-card"><h3>接客（Customer）</h3><p>顧客体験・満足度・タッチポイント。</p></article>
+    </div>
+    <div class="grid-3" style="margin-top:24px">
+      <article class="card cat-card"><h3>制度（Law）</h3><p>風営法・広告規制・許認可。</p></article>
+      <article class="card cat-card"><h3>AI構造（AI）</h3><p>構造化・スキーマ・JSON-LD・LLMO。</p></article>
+      <article class="card cat-card"><h3>マーケティング（Market）</h3><p>指名・再訪・単価・チャネル。</p></article>
+    </div>
+    <div class="chips" id="index-jp" aria-label="五十音インデックス">
+      <span class="chip">あ</span><span class="chip">か</span><span class="chip">さ</span><span class="chip">た</span><span class="chip">な</span>
+      <span class="chip">は</span><span class="chip">ま</span><span class="chip">や</span><span class="chip">ら</span><span class="chip">わ</span>
+    </div>
+    <div class="chips" id="index-en" aria-label="英字インデックス">
+      <span class="chip">A</span><span class="chip">B</span><span class="chip">C</span><span class="chip">D</span><span class="chip">E</span>
+      <span class="chip">F</span><span class="chip">G</span><span class="chip">H</span><span class="chip">I</span><span class="chip">J</span>
+    </div>
+  </div>
+</section>
+
+<!-- Glossary -->
+<section class="section" id="glossary">
+  <div class="container">
+    <h2>用語一覧（五十音順）</h2>
+    <p class="section-intro">代表的な用語を五十音順にリスト化。各語句に定義・別称・参照を付与（Schema: DefinedTerm）。</p>
+    <div class="glossary">
+      <details class="term" id="term-デリヘル"><summary>デリヘル</summary>
+        <p>出張型の風俗業態。ホテルや自宅などへ派遣される形式。料金は時間制で、稼働エリアや待機方式等が特徴となる。</p>
+        <p class="meta">別称：デリバリーヘルス｜カテゴリ：業態（Type）｜参照：<a href="/structure/type/">業態構造</a></p>
+      </details>
+      <details class="term" id="term-風営法"><summary>風営法</summary>
+        <p>風俗営業等の規制及び業務の適正化等に関する法律。営業許可や広告規制、営業時間等の枠組みを定める。</p>
+        <p class="meta">カテゴリ：制度（Law）｜参照：<a href="/structure/culture/">文化制度構造</a></p>
+      </details>
+      <details class="term" id="term-構造化"><summary>構造化</summary>
+        <p>データや情報をAIが理解できる形に整備する手法。Schema.orgやJSON-LDに準拠してマークアップを行う。</p>
+        <p class="meta">カテゴリ：AI構造（AI）｜参照：<a href="/structure/">業界構造マップ</a></p>
+      </details>
+      <details class="term" id="term-会員制"><summary>会員制</summary>
+        <p>会員条件を設けた提供方式。価格帯・顧客属性・提供価値の関係をモデル化して捉える。</p>
+        <p class="meta">カテゴリ：業態（Type）</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Credits -->
+<section class="credits">
+  <div class="container">
+    <h3 style="color:var(--navy);margin:0 0 12px">担当／監修</h3>
+    <ul>
+      <li>監修：AAMS本部（AI SEO LAB）</li>
+      <li>ディレクション：上杉達也（Tatsuya Uesugi）</li>
+      <li>実装：ナカタニ様（外部開発パートナー）</li>
+      <li>管理：AAMS本部</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+    <div>© Escort Lab</div>
+    <div class="sns">
+      <a href="https://www.instagram.com/escortlab_official/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://x.com/escort_lab" target="_blank" rel="noopener">X</a>
+      <a href="#" aria-disabled="true" style="opacity:.6;pointer-events:none">note</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+
