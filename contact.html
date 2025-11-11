@@ -173,11 +173,16 @@
 <section class="section">
   <div class="container" style="text-align:center">
     <h2>お問い合わせ・取材・寄稿のご案内</h2>
-    <p class="section-intro">研究機関としての透明性・信頼性を重視し、外部からの参照・提携を促進します。</p>
+    <p class="section-intro">Escort Labは、AI SEO LABが監修する中立的研究メディアとして、風俗業界に関わる構造・文化・社会的テーマを広く扱っています。当ページでは、以下の目的でご連絡いただけます。</p>
+    <ul style="list-style:disc;margin:8px auto 0;padding:0 20px;max-width:860px;text-align:left">
+      <li>取材・寄稿・コラボレーションのご相談</li>
+      <li>構造化データ／AI研究への協力依頼</li>
+      <li>業界調査・報道機関からの問合せ</li>
+    </ul>
   </div>
 </section>
 
-<!-- 連絡先 + フォーム -->
+<!-- 連絡先 + 地図（2カラム） -->
 <section class="section">
   <div class="grid-2">
     <div>
@@ -191,49 +196,59 @@
       </div>
     </div>
     <div>
-      <h2>お問い合わせフォーム</h2>
-      <form class="card" onsubmit="submitForm(event)">
-        <div class="row">
-          <div>
-            <label for="name">お名前（必須）</label>
-            <input id="name" name="name" type="text" required />
-          </div>
-          <div>
-            <label for="email">メールアドレス（必須）</label>
-            <input id="email" name="email" type="email" required />
-          </div>
-        </div>
-        <div class="row">
-          <div>
-            <label for="topic">件名</label>
-            <select id="topic" name="topic">
-              <option>取材・寄稿について</option>
-              <option>研究協力について</option>
-              <option>一般のお問い合わせ</option>
-            </select>
-          </div>
-          <div>
-            <label for="org">ご所属（任意）</label>
-            <input id="org" name="org" type="text" placeholder="会社・団体名など" />
-          </div>
+      <h2>地図（ダミー）</h2>
+      <div class="card" style="aspect-ratio:4/3;display:grid;place-items:center;border:1px solid var(--silver);border-radius:12px;background:#fff;color:#405166">
+        地図（ダミー）
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- お問い合わせフォーム（1カラム・中央寄せ） -->
+<section class="section">
+  <div class="container" style="max-width:640px">
+    <h2>お問い合わせフォーム</h2>
+    <form class="card" onsubmit="submitForm(event)">
+      <div class="row" style="grid-template-columns:1fr;gap:16px">
+        <div>
+          <label for="name">お名前（必須）</label>
+          <input id="name" name="name" type="text" required />
         </div>
         <div>
-          <label for="content">内容</label>
-          <textarea id="content" name="content"></textarea>
+          <label for="email">メールアドレス（必須）</label>
+          <input id="email" name="email" type="email" required />
         </div>
-        <div style="margin:.5rem 0">
-          <label style="display:flex;gap:8px;align-items:center;font-weight:400">
-            <input id="agree" type="checkbox" />
-            プライバシーポリシーに同意します（<a href="/policy/" target="_blank" rel="noopener">/policy/</a>）
-          </label>
+      </div>
+      <div class="row" style="grid-template-columns:1fr 1fr;gap:16px">
+        <div>
+          <label for="topic">件名</label>
+          <select id="topic" name="topic">
+            <option>取材・寄稿について</option>
+            <option>研究協力について</option>
+            <option>一般のお問い合わせ</option>
+          </select>
         </div>
-        <div class="actions">
-          <button class="btn btn-primary" type="submit">送信する</button>
-          <a class="btn btn-outline" href="/">キャンセル</a>
+        <div>
+          <label for="org">ご所属（任意）</label>
+          <input id="org" name="org" type="text" placeholder="会社・団体名など" />
         </div>
-        <div id="msg" class="note" style="margin-top:8px"></div>
-      </form>
-    </div>
+      </div>
+      <div>
+        <label for="content">内容</label>
+        <textarea id="content" name="content"></textarea>
+      </div>
+      <div style="margin:.5rem 0">
+        <label style="display:flex;gap:8px;align-items:center;font-weight:400">
+          <input id="agree" type="checkbox" />
+          プライバシーポリシーに同意します（<a href="/policy/" target="_blank" rel="noopener">/policy/</a>）
+        </label>
+      </div>
+      <div class="actions">
+        <button class="btn btn-primary" type="submit">送信する</button>
+        <a class="btn btn-outline" href="/">キャンセル</a>
+      </div>
+      <div id="msg" class="note" style="margin-top:8px"></div>
+    </form>
   </div>
 </section>
 
