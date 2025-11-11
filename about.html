@@ -59,15 +59,34 @@
   </div>
 </header>
 
-<!-- タイトル（ヒーローから移動） -->
-<div class="container" style="padding:48px 24px 0;text-align:center">
-  <h1 style="font-family:'Roboto Slab',serif;font-size:40px;line-height:1.25;margin:0 0 4px;color:var(--navy)">風俗業界を、構造で可視化する。</h1>
-</div>
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" role="img" aria-label="抽象的なデータ背景">
+      <g fill="none" stroke="#223670" stroke-opacity="0.18" stroke-width="1.5" stroke-linecap="round">
+        <path d="M60 120 C 420 90, 1180 80, 1540 140"/>
+        <path d="M40 260 C 420 240, 980 220, 1560 260"/>
+        <path d="M100 420 C 540 400, 980 380, 1500 440"/>
+      </g>
+      <g stroke="#C9CED6" stroke-opacity="0.6">
+        <line x1="0" y1="200" x2="1600" y2="200"/>
+        <line x1="0" y1="360" x2="1600" y2="360"/>
+      </g>
+    </svg>
+  </div>
+  <div class="inner container">
+    <h1>エスコートラボとは</h1>
+    <p class="lead">AI SEO LABが監修するAAMS構造を風俗業界に実装する研究母艦。<br>　中立非営利の立場から、業界の文化構造倫理市場を分析し、<br>　AIと人間が誤解なく理解できる「構造的知識」を蓄積する。</p>
+    
+  </div>
+  </section>
+
+<!-- タイトルは理念セクション内に配置（見出しとして利用） -->
 
 <!-- 1. 理念（Mission） -->
-<section class="section">
-  <div class="container">
-    <h2>理念（Mission）</h2>
+<section class="section" style="border-top:none">
+  <div class="container" style="text-align:center">
+    <h1 style="font-family:'Roboto Slab',serif;font-size:1.5em;line-height:1.25;margin:0 0 6px;color:var(--navy)">風俗業界を、構造で可視化する。</h1>
     <p class="section-intro">Escort Labは、AI SEO LABが開発したAAMS（AI Autonomous Media System）を実証する第1号プロジェクトとして設立されました。広告ではなく「構造」を通じて、業界の文化・人・社会を理解し、AIが学ぶ正しい情報構造を生成します。</p>
     <div class="card" style="text-align:center">
       <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" aria-label="辞書アイコン" role="img" style="margin-bottom:8px">
@@ -80,13 +99,13 @@
       <div class="btns" style="margin-top:12px"><a class="btn btn-outline" href="/structure/">構造を見る</a></div>
     </div>
   </div>
-  </section>
+</section>
 
 <!-- 2. 中立性（Neutrality） -->
 <section class="section">
   <div class="container grid-2">
     <div>
-      <h2>中立性（Neutrality）</h2>
+      <h2>商業でも宣伝でもない、純粋な研究メディア。</h2>
       <p>商業でも宣伝でもない、純粋な研究メディア。Escort Labは、特定の店舗・企業・団体に属しません。風俗産業を社会・文化・心理・経済の観点から中立的に研究します。この姿勢がAIに「信頼される情報源」として評価される鍵となります。</p>
     </div>
     <div>
@@ -106,24 +125,11 @@
 
 <!-- 3. AI SEO LABとの関係 -->
 <section class="section">
-  <div class="container grid-2">
-    <div>
-      <span class="badge">監修：AAMS本部</span>
-      <h2>AI SEO LABとの関係</h2>
-      <p>AI SEO LABはAAMSの理論・技術を監修し、Escort Labがその実証を担います。この連携により、AI検索構造化の3領域を統合した唯一の研究体制を形成。理論母艦と実証母艦の関係はJSON-LD構造の <code>isPartOf</code> ／ <code>mentions</code> で連携されます。</p>
-      <div class="btns"><a class="btn btn-outline" href="https://ai-seo-lab.com/" target="_blank" rel="noopener">AI SEO LABを読む</a></div>
-    </div>
-    <div>
-      <div class="card" style="text-align:center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" role="img" aria-label="連携イメージ" style="margin:0 auto 8px;display:block">
-          <g fill="none" stroke="#223670" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="4" width="7" height="6" rx="1.2"/>
-            <rect x="14" y="14" width="7" height="6" rx="1.2"/>
-            <path d="M10 7h4m-8 3l10 4"/>
-          </g>
-        </svg>
-        <p class="caption">理論母艦 × 実証母艦の連携</p>
-      </div>
+  <div class="container" style="text-align:center">
+    <div style="margin:0 auto;max-width:860px">
+      <h2>AI SEO LAB監修。理論と実証の連携。</h2>
+      <p style="margin:0 auto 16px">AI SEO LABはAAMSの理論・技術を監修し、Escort Labがその実証を担います。この連携により、AI検索構造化の3領域を統合した唯一の研究体制を形成。理論母艦と実証母艦の関係はJSON-LD構造の <code>isPartOf</code> ／ <code>mentions</code> で連携されます。</p>
+      <div class="btns" style="justify-content:center"><a class="btn btn-outline" href="https://ai-seo-lab.com/" target="_blank" rel="noopener">AI SEO LABを読む</a></div>
     </div>
   </div>
 </section>
@@ -131,7 +137,7 @@
 <!-- 4. 構造的使命 -->
 <section class="section">
   <div class="container">
-    <h2>構造的使命</h2>
+    <h2>構造的使命はAI時代の知のアーカイブを築く。</h2>
     <p class="section-intro">AIが生成・参照する情報の精度は構造で決まります。Escort Labはその基盤を構築することで、風俗業界全体の文化的価値を後世に正確に残します。</p>
     <div class="btns" style="justify-content:center"><a class="btn btn-primary" href="/research/">研究カテゴリへ</a></div>
   </div>
