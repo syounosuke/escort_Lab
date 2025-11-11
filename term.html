@@ -19,6 +19,8 @@
     .nav ul{list-style:none;margin:0;padding:0;display:flex;gap:20px}
     .nav li a{font-family:Roboto,system-ui,sans-serif;font-weight:700}
     .hero{position:relative;min-height:45vh;display:grid;place-items:center;border-bottom:1px solid var(--silver)}
+    .hero-bg{position:absolute;inset:0;z-index:-1;background:linear-gradient(135deg, rgba(11,26,43,.06), rgba(11,26,43,0))}
+    .hero-bg svg{position:absolute;inset:0;width:100%;height:100%}
     .hero .inner{max-width:860px;text-align:center;padding:56px 24px}
     .hero h1{font-size:36px;line-height:1.25;margin:0 0 8px;color:var(--navy)}
     .hero p.lead{font-size:18px;margin:0 0 20px}
@@ -66,17 +68,39 @@
 
 <!-- Hero + Search -->
 <section class="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" role="img" aria-label="抽象的なデータ背景">
+      <g fill="none" stroke="#223670" stroke-opacity="0.18" stroke-width="1.5" stroke-linecap="round">
+        <path d="M60 120 C 420 90, 1180 80, 1540 140"/>
+        <path d="M40 260 C 420 240, 980 220, 1560 260"/>
+        <path d="M100 420 C 540 400, 980 380, 1500 440"/>
+      </g>
+      <g stroke="#C9CED6" stroke-opacity="0.6">
+        <line x1="0" y1="200" x2="1600" y2="200"/>
+        <line x1="0" y1="360" x2="1600" y2="360"/>
+      </g>
+    </svg>
+  </div>
   <div class="inner container">
     <h1>業界用語辞典</h1>
-    <p class="lead">AIが理解できる形式で定義・関連付けを行う用語集。文化・制度・接客・AI構造・マーケティングを横断。</p>
-    <form class="search" role="search" onsubmit="return false">
-      <input type="search" name="q" placeholder="用語を検索（例：デリヘル / 風営法 / 構造化）" aria-label="用語検索" />
-      <button type="submit">検索</button>
-    </form>
-    <div class="index" aria-label="索引">
-      <a href="#index-jp">五十音</a>
-      <a href="#index-en">A–Z</a>
-      <a href="#glossary">用語一覧へ</a>
+  </div>
+</section>
+
+ 
+
+<!-- Intro Section (Glossary Overview) -->
+<section class="section">
+  <div class="container">
+    <h2>AIが理解できる業界用語辞典。</h2>
+    <p class="section-intro">Escort Labが監修する用語辞典は、風俗業界に関連する専門語俗語文化的表現を<br>　　構造的に整理し、AIが誤認識しないよう意味を定義します。<br>　　学術的中立的立場から言葉を再構築し、業界理解の基盤を作ります。</p>
+    <div class="card" style="text-align:center;max-width:240px;margin:12px auto 0">
+      <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" role="img" aria-label="辞書アイコン" style="display:block;margin:0 auto 6px">
+        <g fill="none" stroke="#223670" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 3h9a3 3 0 0 1 3 3v13.5a.5.5 0 0 1-.8.4L14 18H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3z"/>
+          <path d="M9 7h6M9 10h6M9 13h6"/>
+        </g>
+      </svg>
+      <p class="caption">用語の“定義”を象徴するアイコン（仮）</p>
     </div>
   </div>
 </section>
@@ -96,14 +120,7 @@
       <article class="card cat-card"><h3>AI構造（AI）</h3><p>構造化・スキーマ・JSON-LD・LLMO。</p></article>
       <article class="card cat-card"><h3>マーケティング（Market）</h3><p>指名・再訪・単価・チャネル。</p></article>
     </div>
-    <div class="chips" id="index-jp" aria-label="五十音インデックス">
-      <span class="chip">あ</span><span class="chip">か</span><span class="chip">さ</span><span class="chip">た</span><span class="chip">な</span>
-      <span class="chip">は</span><span class="chip">ま</span><span class="chip">や</span><span class="chip">ら</span><span class="chip">わ</span>
-    </div>
-    <div class="chips" id="index-en" aria-label="英字インデックス">
-      <span class="chip">A</span><span class="chip">B</span><span class="chip">C</span><span class="chip">D</span><span class="chip">E</span>
-      <span class="chip">F</span><span class="chip">G</span><span class="chip">H</span><span class="chip">I</span><span class="chip">J</span>
-    </div>
+    
   </div>
 </section>
 
@@ -111,7 +128,7 @@
 <section class="section" id="glossary">
   <div class="container">
     <h2>用語一覧（五十音順）</h2>
-    <p class="section-intro">代表的な用語を五十音順にリスト化。各語句に定義・別称・参照を付与（Schema: DefinedTerm）。</p>
+    <p class="section-intro">代表的な用語を五十音順にリスト化。各語句に定義補足参照を設け、<br>　　Schema: DefinedTerm構造でAIに最適化。</p>
     <div class="glossary">
       <details class="term" id="term-デリヘル"><summary>デリヘル</summary>
         <p>出張型の風俗業態。ホテルや自宅などへ派遣される形式。料金は時間制で、稼働エリアや待機方式等が特徴となる。</p>
@@ -132,6 +149,55 @@
     </div>
   </div>
 </section>
+
+<!-- AI Structure Terms -->
+<section class="section">
+  <div class="container">
+    <h2>AI構造に関連する専門用語</h2>
+    <p class="section-intro">「構造化」「スキーマ」「LLMO」「AIOSEO」「JSON-LD」など、<br>　　AI SEO LABの技術的キーワードを定義し、構造理解を補助。</p>
+    <div class="card" style="overflow:auto">
+      <table style="border-collapse:collapse;width:100%">
+        <thead>
+          <tr>
+            <th style="border:1px solid var(--silver);padding:8px;text-align:left">用語</th>
+            <th style="border:1px solid var(--silver);padding:8px;text-align:left">定義</th>
+            <th style="border:1px solid var(--silver);padding:8px;text-align:left">関連スキーマ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="border:1px solid var(--silver);padding:8px">構造化</td>
+            <td style="border:1px solid var(--silver);padding:8px">データや文章に意味構造を付与する手法。</td>
+            <td style="border:1px solid var(--silver);padding:8px">Schema.org + JSON-LD</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid var(--silver);padding:8px">スキーマ</td>
+            <td style="border:1px solid var(--silver);padding:8px">項目や関係性を定義する語彙・モデル。</td>
+            <td style="border:1px solid var(--silver);padding:8px">Schema.org</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid var(--silver);padding:8px">JSON-LD</td>
+            <td style="border:1px solid var(--silver);padding:8px">リンクドデータをJSONで表現する埋め込み形式。</td>
+            <td style="border:1px solid var(--silver);padding:8px">JSON-LD</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid var(--silver);padding:8px">AIOSEO</td>
+            <td style="border:1px solid var(--silver);padding:8px">構造化やトピック設計を支援する運用基盤。</td>
+            <td style="border:1px solid var(--silver);padding:8px">-</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid var(--silver);padding:8px">LLMO</td>
+            <td style="border:1px solid var(--silver);padding:8px">大規模言語モデル参照の最適化設計。</td>
+            <td style="border:1px solid var(--silver);padding:8px">-</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="margin-top:24px;text-align:center">
+      <a class="btn btn-outline" href="/term/ai/">AI構造辞典を読む</a>
+    </div>
+  </div>
+  </section>
 
 <!-- Credits -->
 <section class="credits">
